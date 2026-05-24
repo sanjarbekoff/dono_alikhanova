@@ -6,7 +6,6 @@ async function sendFormData() {
 
   const formDataObj = JSON.parse(formDataRaw);
 
-
   const formData = new FormData();
   formData.append("sheetName", "Lead");
   formData.append("Ism", formDataObj.Ism);
