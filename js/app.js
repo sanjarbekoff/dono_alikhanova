@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     i = document.getElementById("phoneError"),
     r = document.getElementById("submitBtn");
 
-  const E = window.phoneFormatter; // ✅ take it from formatter.js
+  const E = window.phoneFormatter;
 
   let p = !1,
     g = 0;
@@ -85,26 +85,3 @@ document.addEventListener("DOMContentLoaded", function () {
     v();
   });
 });
-
-const timerEl = document.getElementById("timer");
-
-// start time in seconds (2 minutes)
-let time = 2 * 60;
-
-const interval = setInterval(() => {
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-
-  timerEl.textContent = 
-    String(minutes).padStart(2, "0") + ":" + 
-    String(seconds).padStart(2, "0");
-
-  if (time === 0) {
-    clearInterval(interval);
-    // optional: do something when finished
-    // alert("Time's up!");
-    return;
-  }
-
-  time--;
-}, 1000);
